@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LifeFlow – Emergency Blood Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>❤️ LifeFlow</h1>
+    <div class="navbar">
+      <a href="#" class="nav-box">Home</a>
+      <a href="#" class="nav-box">Donor</a>
+      <a href="#" class="nav-box">About</a>
+      <a href="#" class="nav-box">Login</a>
+      <a href="#" class="nav-box">Admin</a>
+    </div>
+  </header>
+  <script>
+    // Falling drops    
+    for (let i = 0; i < 20; i++) {
+      const d = document.createElement('div');
+      d.className = 'drop';
+      d.style.left = Math.random() * 100 + 'vw';
+      d.style.animationDelay = Math.random() * 6 + 's';
+      document.body.appendChild(d);
+    }    
+  </script>
+  <section class="hero">
+    <h2>Connecting <span>Donors</span> & <span>Patients</span></h2>
+    <p>Fast & reliable blood matching during emergencies.</p>
+    <button class="btn" id="toggleModeBtn">Toggle Dark/Light Mode</button>
+    <section class="login-section">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" id="username">
+      <input type="password" placeholder="Password" id="password">
+      <select id="role">
+        <option>Donor</option>
+        <option>Hospital</option>
+        <option>Recipient</option>
+        <option>Admin</option>
+      </select>
+      <button class="btn" id="loginBtn">Login</button>
+    </section>
+
+    <div class="system">
+      <div class="heart">❤️</div>
+
+      <div class="ring outer">
+        <span class="blood b1">A+</span>
+        <span class="blood b2">B+</span>
+        <span class="blood b3">O+</span>
+        <span class="blood b4">AB+</span>
+      </div>
+
+      <div class="ring inner">
+        <span class="blood b1">A-</span>
+        <span class="blood b2">B-</span>
+        <span class="blood b3">O-</span>
+        <span class="blood b4">AB-</span>
+      </div>
+    </div>
+  </section>
+  <section class="blood-info">
+    <h2>Blood Groups Information</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>O-</h3>
+        <p>Universal donor, can donate to all blood groups.</p>
+      </div>
+      <div class="card">
+        <h3>O+</h3>
+        <p>Common donor, compatible with A+, B+, AB+, O+.</p>
+      </div>
+      <div class="card">
+        <h3>A+</h3>
+        <p>Frequently needed for surgeries, compatible with A+, AB+.</p>
+      </div>
+      <div class="card">
+        <h3>A-</h3>
+        <p>Rare, compatible with A-, A+, AB-, AB+.</p>
+      </div>
+      <div class="card">
+        <h3>B+</h3>
+        <p>Donates to B+ and AB+ patients.</p>
+      </div>
+      <div class="card">
+        <h3>B-</h3>
+        <p>Rare, donates to B-, B+, AB-, AB+.</p>
+      </div>
+      <div class="card">
+        <h3>AB+</h3>
+        <p>Universal receiver, can receive blood from all groups.</p>
+      </div>
+      <div class="card">
+        <h3>AB-</h3>
+        <p>Can receive from AB-, A-, B-, O-.</p>
+      </div>
+    </div>
+  </section>
+  <section class="critical">
+    <h2>⚠️ Critical Blood Shortage</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Central Hospital</h3>
+        <p>Urgent requirement of O- and B+ blood groups.</p>
+        <p>📞 022-24567890</p>
+        <section class="map">
+          <h2>🗺️ Live Hospital Map 📍</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3771.12345!2d73.12345!3d18.12345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1234567890"
+              allowfullscreen="" loading="lazy"></iframe>
+            <div class="map-overlay">
+              <h3>🏥 Nearby Hospitals</h3>
+              <div class="hospital-list">
+                <div class="hospital-item">
+                  Central Hospital
+                  <span class="hospital-status status-critical">Critical</span>
+                </div>
+                <div class="hospital-item">
+                  Medical Center
+                  <span class="hospital-status status-urgent">Urgent</span>
+                </div>
+                <div class="hospital-item">
+                  Community Hospital
+                  <span class="hospital-status status-normal">Normal</span>
+                </div>
+              </div>
+            </div>
+            <div class="map-controls">
+              <button class="map-btn active">All Hospitals</button>
+              <button class="map-btn">Critical Only</button>
+              <button class="map-btn">Blood Banks</button>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="card">
+              <h3>Central Hospital</h3>
+              <p>Main emergency center with 24/7 blood bank services</p>
+              <p>📞 022-24567890</p>
+            </div>
+            <div class="card">
+              <h3>Medical Center</h3>
+              <p>Specialized hospital with advanced blood storage facilities</p>
+              <p>📞 022-26789012</p>
+            </div>
+            <div class="card">
+              <h3>Community Hospital</h3>
+              <p>Local hospital serving the community with emergency blood services</p>
+              <p>📞 022-29876543</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+  <section class="donation-process">
+    <h2>Donation Process</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Registration</h3>
+        <p>Donors and patients register by providing personal details and blood group information.</p>
+      </div>
+      <div class="card">
+        <h3>Health Check</h3>
+        <p>Basic health screening before donation.</p>
+      </div>
+      <div class="card">
+        <h3>Donation</h3>
+        <p>Safe donation at certified hospitals with post-donation care.</p>
+      </div>
+    </div>
+  </section>
+  <section class="find-donor">
+    <h2>Find Donor</h2>
+    <input type="text" id="searchBlood" placeholder="Blood Group">
+    <input type="text" id="searchCity" placeholder="City">
+    <button id="searchDonorBtn">Search</button>
+  </section>
+  <section class="request-blood">
+    <h2>Request Blood / Emergency</h2>
+    <select>
+      <option>A+</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B-</option>
+      <option>O+</option>
+      <option>O-</option>
+      <option>AB+</option>
+      <option>AB-</option>
+    </select>
+    <button class="btn">Submit Request</button>
+  </section>
+  <section class="admin-section">
+    <h2 style="text-align:center;margin-bottom:30px;color:#ff3b3b">Admin Dashboard</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Blood Stock</h3><canvas id="bloodStockChart" height="200"></canvas>
+      </div>
+      <div class="card">
+        <h3>Users by Status</h3><canvas id="statusChart" height="200"></canvas>
+      </div>
+      <div class="card">
+        <h3>Users by Role</h3><canvas id="roleChart" height="200"></canvas>
+      </div>
+    </div>
+    <h2 style="text-align:center;margin-top:40px;margin-bottom:20px;color:#ff3b3b">Manage Users</h2>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+      </table>
+    </div>
+
+  </section>
+  <section class="about-section">
+    <h2>About LifeFlow</h2>
+    <p>LifeFlow is a digital emergency blood donation platform connecting patients, hospitals, and donors quickly to
+      reduce delay and save lives.</p>
+    <p>📍 India | 📧 support@lifeflow.org</p>
+  </section>
+  <footer>
+    <p>Email: support@lifeflow.org</p>
+    <p>Contact: +91 90000 00000</p>
+    <button class="leave">Leave Platform</button>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
