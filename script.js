@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const usersStatus = { Pending:5, Approved:20, Rejected:3 };
   const usersRole = { Donor:15, Hospital:8, Recipient:5 };
   const donors=[
-    {name:'Renu', blood:'A+', city:'Mumbai'},
+    {name:'sabiya', blood:'A+', city:'Mumbai'},
     {name:'Sakshi', blood:'B+', city:'Pune'},
     {name:'Aishwarya', blood:'O+', city:'Karjat'}
   ];
   const usersList = [
-    {id:1,name:'Renu',role:'Donor',status:'Pending'},
+    {id:1,name:'sabiya',role:'Donor',status:'Pending'},
     {id:2,name:'Sakshi',role:'Hospital',status:'Approved'},
     {id:3,name:'Aishwarya',role:'Recipient',status:'Pending'},
     {id:4,name:'Saniya',role:'Donor',status:'Approved'},
